@@ -5,7 +5,7 @@ abstract class StudentBMICacular {
   const StudentBMICacular();
 
   List<Student> calculateBmiAndReturnStudentList() {
-    var studentList = getstudentsData();
+    var studentList = getStudentsData();
     studentList = doStudentsFiltering(studentList);
     _calculateStudentsBmi(studentList);
     return studentList;
@@ -27,5 +27,5 @@ abstract class StudentBMICacular {
   }
 
   @protected
-  List<Student> getstudentsData();
+  List<Student> getStudentsData();
 }
