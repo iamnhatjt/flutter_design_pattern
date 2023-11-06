@@ -24,3 +24,21 @@ abstract class PizzaBuilder {
   void buildSauce();
   void buildToppings();
 }
+
+// concrete builder
+class CheesePizzaConcrete extends PizzaBuilder {
+  @override
+  void buildDough() {
+    pizza.dough = "Thin crust";
+  }
+
+  @override
+  void buildSauce() {
+    pizza.sauce = "Tomato sauce";
+  }
+
+  @override
+  void buildToppings() {
+    pizza.toppings = "Mozzarella cheese";
+  }
+}
