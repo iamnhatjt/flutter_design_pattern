@@ -1,5 +1,7 @@
 // This is class  pizza
 
+import 'package:flutter/foundation.dart';
+
 class Pizza {
   String? dough;
   String? sauce;
@@ -40,5 +42,13 @@ class CheesePizzaConcrete extends PizzaBuilder {
   @override
   void buildToppings() {
     pizza.toppings = "Mozzarella cheese";
+  }
+}
+
+void main() {
+  PizzaBuilder pizzaBuilder = CheesePizzaConcrete();
+  Pizza pizza = pizzaBuilder.pizza;
+  if (kDebugMode) {
+    print(pizza);
   }
 }
